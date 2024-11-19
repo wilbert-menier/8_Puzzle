@@ -1,0 +1,17 @@
+1. Provide a high-level description (ie, using minimal amount of technical
+   jargon) of the project in no more than 200 words.
+
+   We had to implement 2 immutable data type: Board and Solver. The Board data type was essential to Solver because we needed its methods in order to solve the 8-Puzzle problem using the A* search algorithm. Inside the constructor of Board, we had to calculate the Hamming and Manhattan priority function as it was needed for us to determine the number of moves needed to solve the problem. Furthermore, we had to calculate the number of inversions in the puzzle board because this let us know ahead of time if the board was solvable. We also enqueued the neighbors of the puzzle board-those that can be reached in move- into a linkedQueue. These methods from Board were how we were able to solve distinct amount of 8-puzzles in the Solver data type; the solution happened in its constructor. For this to work, we inserted a SearchNode into a MinPQ, as long as the PQ was not empty, we removed the node with minimum priority and inserted into the PQ a new SearchNode derived from the neighbors. Once the solution was found, all that was left to do was push the solution into a stack and extract the moves it took.
+2. Did you receive help from anyone? List their names, status (classmate, 
+   CS210 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+3. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...
